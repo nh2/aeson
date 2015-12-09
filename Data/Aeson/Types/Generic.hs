@@ -733,7 +733,7 @@ class IsRecord (f :: * -> *) isRecord | f -> isRecord
 
 instance (IsRecord f isRecord) => IsRecord (f :*: g) isRecord
   where isUnary = const False
-instance OVERLAPPING_ IsRecord (M1 S NoSelector f) False
+-- instance OVERLAPPING_ IsRecord (M1 S NoSelector f) False
 instance (IsRecord f isRecord) => IsRecord (M1 S c f) isRecord
 instance IsRecord (K1 i c) True
 instance IsRecord U1 False
